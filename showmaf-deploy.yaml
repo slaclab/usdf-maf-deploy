@@ -29,10 +29,10 @@ spec:
         resources:
           limits:
             cpu: 1
-            memory: "2Gi"
+            memory: "10Gi"
           requests:
             cpu: 500m
-            memory: "1Gi"
+            memory: "8Gi"
         volumeMounts:
         - mountPath: /data/fbs_sims
           name: sdf-data-rubin
@@ -53,7 +53,7 @@ spec:
   - ReadOnlyMany
   resources:
     requests:
-      storage: 1Gi
+      storage: 8Gi
 ---
 apiVersion: v1
 kind: Service
