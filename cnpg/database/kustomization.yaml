@@ -1,0 +1,24 @@
+resources:
+- ns.yaml
+- database.yaml
+- pooler-transaction-ro.yaml
+- pooler-transaction-rw.yaml
+- backup.yaml
+
+
+secretGenerator:
+- name: usdf-maf-opsim-creds
+  options:
+    disableNameSuffixHash: true
+  files:
+  - etc/.secrets/username
+  - etc/.secrets/password
+
+- name: s3-creds
+  options:
+    disableNameSuffixHash: true
+  files:
+  - ACCESS_KEY_ID=etc/.secrets/access-key
+  - ACCESS_SECRET_KEY=etc/.secrets/secret-key
+
+namespace: opsim
