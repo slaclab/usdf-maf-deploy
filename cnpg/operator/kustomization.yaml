@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: cnpg-system
+resources:
+- resources/ns.yaml
+- resources/clusterrole-cnpg-cloudnative-pg-edit.yaml
+- resources/clusterrole-cnpg-cloudnative-pg-view.yaml
+- resources/clusterrole-cnpg-cloudnative-pg.yaml
+- resources/clusterrolebinding-cnpg-cloudnative-pg.yaml
+- resources/configmap-cnpg-controller-manager-config.yaml
+- resources/configmap-cnpg-default-monitoring.yaml
+- resources/deployment-cnpg-cloudnative-pg.yaml
+- resources/mutatingwebhookconfiguration-cnpg-mutating-webhook-configuration.yaml
+- resources/service-cnpg-webhook-service.yaml
+- resources/serviceaccount-cnpg-cloudnative-pg.yaml
+- resources/validatingwebhookconfiguration-cnpg-validating-webhook-configuration.yaml
