@@ -13,6 +13,11 @@ metadata:
   labels:
     app: maf-server
 spec:
+  template:
+    spec:
+      securityContext:
+        supplementalGroups:
+          - 4085
   replicas: 1
   selector:
     matchLabels:
